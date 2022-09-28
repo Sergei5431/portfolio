@@ -1,0 +1,1010 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../assets/fonts/Merriweather-Bold.ttf");
+}
+/* делаем тень box-shadow: 0px 2px rgba(21, 24, 36, 0.15993)*/
+
+
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  transition: 0.9s; 
+  /* width: calc(100% - 40px); */
+}
+
+h2 {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  color: #bdae82;
+  /* background: red; */
+  line-height: 10px; /*надо выровнять по центру*/
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box; /*теперь бордер не увеличивается , за счет подинг и т.д*/
+  scroll-behavior: smooth;/* Чтобы прокрутка происходила плавно по якорям */
+  background-color: #000000;
+  /* width: calc(100% - 40px); */
+}
+
+*,
+*::before,
+::after {
+  box-sizing: inherit;
+}
+
+.main{
+  max-width: 1440px;
+}
+
+.body {
+  width: calc(100% - 40px);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 40px;
+  color: #ffffff;
+}
+/*header styls start*/
+
+.header2 {
+  max-width: 1440px;
+  padding: 0 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  
+  z-index: 1;
+  max-width: 1440px;
+
+  position: fixed; /*фиксирем, теперь header высота не учитываетя для остального документа*/
+  top: 0; /*в верху*/
+  left: 50; /*слева*/
+  width: 100%; /*на всю ширину*/
+}
+
+.header-nav {
+  margin-left: auto;
+}
+
+.header-ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none; /*убираем в списке маркеры, точки*/
+}
+
+.header-item {
+  margin-right: 30px;
+}
+
+.header-item:last-child {
+  /*отступ для последнего элемента убираем*/
+  margin-right: 0;
+}
+
+.header-link {
+  font-size: 20px;
+  line-height: 50px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header-link:hover,
+.header-link:focus,
+.header-link:active {
+  opacity: 0.75; /*измене стиля при наведении мышкой, табом, после клика меняет цвет*/
+}
+
+.header-burger {
+  display: none;
+  max-width: 40px;
+  height: 30px;
+  position: relative;
+  margin-right: 30px;
+}
+
+.burger-line12 {
+  display: block;
+  width: 100%;
+  height: 1px;/*какойто касяк*/
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+}
+
+.burger-line-first {
+  top: 0;
+}
+
+.burger-line-second{
+top: 50%;
+transform: translateY(-50%);
+}
+
+.burger-line-thitd{
+  bottom: 0;
+}
+
+.en-ru {
+  padding: 0 20px;
+}
+
+.en-ru-coior {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.en-ru-coior:hover,
+.en-ru-coior:focus,
+.en-ru-coior:active {
+  opacity: 0.75;
+}
+
+.header-logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+.header-logo:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+/*header styls end*/
+
+/*hero styls start*/
+
+.hero {
+  max-width: 1440px;
+  height: 910px;
+  background: url('../assets/img/bg.png') no-repeat center; /*не повторяется, распологается по центру*/
+  background-size: cover; /*картинка будет полность покрывать блок при любых его разерах*/
+}
+
+.hero-about {
+  padding-top: 250px;
+  padding-left: 80px;
+}
+
+.title {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 120px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  max-width: 470px;
+  font-size: 20px;
+  line-height: 40px;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.forma-submit {
+  padding: 8px 73px;
+  font-size: 20px;
+  line-height: 40px;
+  color: #000000;
+  background: #bdae82;
+  border: 0; /*удаляем border*/
+}
+
+.forma-submit:hover,
+.forma-submit:focus,
+.forma-submit:active {
+  background: #604f1c;
+}
+
+/*hero styls end*/
+
+/*skills style start*/
+
+.skills-wrapper {
+  max-width: 1440px;
+  /* height: 482px; */
+  background-color: #000000;
+}
+
+.box-skills-wrapper {
+  padding-top: 100px;
+}
+
+.box-skills {
+  max-width: 700px;
+  height: 80px;
+  margin: 0 auto;
+  
+}
+
+.title-wrapper{
+position: relative;
+
+}
+
+/* .title-wrapper2{
+    position: relative;
+    
+    } */
+.title-line {
+ position: absolute;
+ margin-top: 5px;
+}
+
+/*line1 эксперимент start*/
+
+.text-center{
+  margin: 0 27px;
+}
+
+.line-left{
+ 
+  max-width: 100%;
+}
+
+.line-right{
+  max-width: 100%;
+}
+
+.box-skills-wrapper1{
+  max-width: 700px;
+  height: 80px;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  padding: 100px;
+}
+
+/*line1 эксперимент end*/
+
+
+/* .title-wrapper::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 274px;
+    height: 3px;
+    background-color: #bdae82;
+    bottom: 5px;
+    left: 0px;
+} */
+
+/* .one {
+   
+    background: #e20f0f;
+    width: 152px;
+    height: 80px;
+    
+} */
+
+/* .title-wrapper2::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 274px;
+    height: 5px;
+    background-color: #bdae82;
+    bottom: 5px;
+    left: 400px;
+} */
+
+.ckills-4-div {
+    display: flex;/*создаем контейнер, попробовать display:inline-block*/
+  flex-wrap: wrap;/*распологаем div ы горизонтально*/
+  max-width: 1400px;
+  /* height: 242px; */
+  background-color: #000000;
+  padding-top: 60px;
+  margin: 0 20px;
+}
+
+.ckills-container {
+    max-width: 320px;
+    height: 240px;
+    margin-right: 22px;
+    
+}
+
+.ckills-container:last-child {
+    margin-right:0;
+}
+
+.text-20-40 {
+    color: #ffffff;
+    font-size: 20px;
+line-height: 40px;
+text-align: center;
+}
+
+.text-card {
+    color: #ffffff;
+    font-size: 18px;
+line-height: 36px;
+text-align: center;
+}
+
+
+
+.camera11-wrapper {
+    width: 62px;
+    margin: auto;
+    }
+
+/*skills style end*/
+
+
+/*Portfolio style start*/
+
+.skills-wrapper2 {
+    max-width: 1440px;
+    /* height: 1550px; */
+    background-color: #000000;
+  }
+
+  .button4 {
+    
+    max-width: 995px;
+    /* height: 55px; */
+    margin: 0 auto;
+  }
+
+  .forma-submit4 {
+    width: 220px;
+    height: 55px;
+    /* padding: 8px 70px; */
+    font-size: 20px;
+    line-height: 40px;
+    color: #bdae82;
+    background: #000000;
+    margin: 10px 15px;
+    border: 2px solid #bdae82 ; 
+  }
+  
+  .forma-submit3 {
+    width: 220px;
+    height: 55px;
+    /* padding: 8px 70px; */
+    font-size: 20px;
+    line-height: 40px;
+    color: #000000;
+    background: #bdae82;
+    border: 2px solid #bdae82 ;
+    margin: 10px 15px;
+  }
+
+  .sea-photo {
+    max-width: 1400px;
+    /* height: auto; */
+    /* height: 115px; */
+    margin: 0 auto;
+    padding-top: 60px;
+    /* width: calc(100% - 40px); */
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.sea-photo {
+/* display: grid;
+flex-direction: row;
+grid-template-columns: repeat(6, 1fr);/*в одно ряду 6 столбцов*/
+/* grid-gap: 25px;/*ширина грид линий(отступы на фото), можно задать отдельно вертикальные и горизонтальные*/
+/* width: calc(100% - 40px); */ 
+
+
+
+}
+
+.card-wrapper{
+  /* width: calc(100% - 40px); */
+  /* grid-column: span 2;одно изображение занимает 2 столбца */
+  margin: 8px;
+}
+
+
+.card{
+  /* width: calc(100% - 40px); */
+}
+
+
+/*Video style end*/
+
+.video{
+  max-width: 1440px;
+  /* height: 945px; */
+  background-color: #000000;
+}
+
+.video-wrapper{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 1400px;
+  height: 705px;
+  margin: 0 auto;
+  background: url(../assets/img/video-player.png) no-repeat center;
+}
+
+.video-picture{
+  /* padding-top: 25px; */
+}
+
+.video-picture{
+  /* position: relative; */
+}
+
+.video-icon-play{
+  /* position: relative;
+  left: 636px;
+  bottom: 420px;
+   */
+  }
+
+.video-icon-play2{
+  /* display: block; */
+  /* margin: auto; */
+  /* padding: auto; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* background: chartreuse;
+transition: ; */
+
+}
+
+/* .video-icon-play::after{
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-clor: aquamarine;
+} */
+
+/*Video style start*/
+
+
+.price{
+  max-width: 1440px;
+  /* height: 845px; */
+  background-color: #000000;
+
+}
+
+.price-wrapper{
+  padding-top: 60px;
+  display: flex;
+  margin: 0 20px;
+  max-width: 1400px;
+  /* height: 505px; */
+  flex-wrap: wrap;
+}
+
+.price-form{
+  
+  margin: 7px 5px;
+  width: 440px;
+  height: 505px;
+  border: 2px solid #bdae82;
+}
+
+.price-form-title{
+
+font-family: Merriweather;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 56px;
+
+
+text-align: center;
+
+color: #FFFFFF;
+}
+
+.price-form-price{
+  font-family: Merriweather;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 48px;
+text-align: center;
+color: #BDAE82;
+}
+
+.price-form-text{
+  font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 36px;
+text-align: center;
+list-style-type: none;
+color: #FFFFFF;
+}
+
+
+
+ .forma-submit-wrapper{
+  width: 220px;
+  margin: 0 auto;
+  position: relative;
+  bottom: -30px;
+}
+
+*.forma-submit-price {
+  height: 55p;
+  width: 220px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 40px;
+  color: #000000;
+  background: #bdae82;
+  border: 0; /*удаляем border*/
+  
+
+}
+
+.forma-submit-price:hover,
+.forma-submit-price:focus,
+.forma-submit-price:active {
+  background: #604f1c;
+} 
+
+
+/* contact me start */
+.contact{
+  display: flex;
+  align-items: center;
+  justify-content:right;
+max-width: 1440px;
+height: 700px;
+position: relative;
+background: url(../assets/img/contacts.png);
+margin-top: 20px;
+}
+
+
+.contact-photo{
+max-width: 1440px;
+height: 700px;
+background-color: #48d62c;
+/* width: calc(100% - 40px); */
+}
+
+.contact-photo-png{
+  max-width: 1400px;
+}
+
+
+
+.requisites{
+  margin: 0 auto;
+  max-width: 450px;
+  height: 445px;
+  margin-left: 0;
+  
+  /* bottom: -0px; */
+  position: absolute;
+  top: 60px;
+  right: 20px;
+
+}
+
+.contact-me{
+  width: 450px;
+  height: 50px;
+  border: 2px solid #bdae82;
+  margin-bottom: 20px;
+  
+}
+
+.contact-me-text{
+  position: relative;
+  top: 12px;
+  
+  margin: 0px;
+  
+
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size:20px;
+  padding: 0 20px;
+
+  color: #BDAE82;
+}
+
+.contact-me1{
+  max-width: 450px;
+  height: 100px;
+  border: 2px solid #bdae82;
+  margin-top: 30px;
+  
+}
+
+
+
+.send-message{
+  margin-top: 30px;
+}
+
+.error{
+  max-width: 450px;
+  height: 80px;
+}
+
+.error-text{
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+
+
+
+  color: #BDAE82;
+}
+
+/* contact me end */
+
+.footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  height: 150px;
+  background-color: #000000;
+}
+
+.gidhab{
+  width: 189px;
+  /* height: 50px; */
+  padding: 0 20px;
+  align-items: center;
+}
+
+.gidhab2022{
+  font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+text-decoration: none;
+color: #FFFFFF;
+}
+
+.icons-wrapper{
+  width: 189px;
+  height: 50px;
+}
+
+.icons-wrapper-link:hover,
+.icons-wrapper-link:focus,
+.icons-wrapper-link:active {
+  opacity: 0.65;
+}
+
+.gidhab2022:hover,
+.gidhab2022:focus,
+.gidhab2022:active {
+  opacity: 0.65;
+}
+
+/* добавил элементы input  */
+.contact-me11{
+  background-color: transparent;
+  border: 0;
+  color: #bdae82;
+  max-width: 220px;
+
+}
+.contact-me11::placeholder{
+  font-family: inherit;
+  color: #bdae82;
+  font-size: 20px;
+}
+
+.contact-me11-textarea{
+  background-color: transparent;
+  border: 0;
+  color: #bdae82;
+  max-width: 220px;
+
+
+  
+  resize: none;/*Также обратите внимание на свойство textarea resize: none, которое указывает, что пользователь не может изменять размер элемента. */
+}
+
+::placeholder {
+  font-family: inherit;
+  color: #bdae82;
+  font-size: 20px;
+
+}
+
+/*Media start*/
+
+@media screen and (max-width: 768px) {
+  .header-burger {
+    display: block;
+    
+  }
+  .header-nav{
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: black;
+    z-index: 10;
+    padding: 65px;
+    transform: translateX(100%);
+    transition: .3s all linear;
+  }
+
+  .header-nav-active{ /*что такое*/
+    transform: translateX(0);
+  }
+
+  .header-item{
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 30px;
+
+  }
+  .header-item:last-child{
+    margin-bottom: 0;
+  }
+
+
+  .header-link{
+    font-size: 42px;
+    line-height: 58px;
+    /* margin-top: 60px; почему не увиличивается бок marginam */
+   
+  }
+  .header-nav-close{
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    z-index: 11;
+      
+  }
+
+  .header-nav-close-line{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+    top: 50%;
+    position: absolute;
+  }
+
+  .header-nav-close-line:first-child{
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .header-nav-close-line:last-child{
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+
+  .hero {
+    
+    /* height: 560px; */
+    background: url('../assets/img/bg.png') no-repeat center; /*не повторяется, распологается по центру*/
+    background-size: cover; /*картинка будет полность покрывать блок при любых его разерах*/
+  }
+  
+  .hero-about {
+    padding-top: 100px;
+    padding-left: 30px;
+  }
+
+  .video-picture {
+    
+    height: 560px;
+    /* background: url('../assets/img/video-player.png') no-repeat center; не повторяется, распологается по центру */
+    background-size: cover; /*картинка будет полность покрывать блок при любых его разерах*/
+  }
+
+  .contact-photo{
+    height: 560px;
+    /* background: url('../assets/img/video-player.png') no-repeat center; не повторяется, распологается по центру */
+    /* background-size: cover; */
+  }
+
+  .contact{
+    height: 560px;
+    background-size: cover;
+  }
+
+  .sea-photo{
+    display: flex;
+  
+  justify-content: center;
+  }
+  
+  .video-wrapper{
+    height: 590px;
+    background-color: rgb(68, 0, 255);
+  }
+
+  .price-wrapper{
+    justify-content: center;
+  }
+
+  .footer{
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+
+  .rolling-wrapper{
+    margin: 10px 0 8px 0;
+  }
+
+  .skills-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .ckills-4-div{
+    justify-content: center;
+  }
+
+  .button4{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .forma-submit4{
+    margin-left: 10px;
+  }
+
+  .forma-submit3{
+    margin-left: 10px;
+  }
+
+  .requisites{
+    position: static;
+    margin-right: 60px;
+  }
+
+  .forma-submit-wrapper{
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************ УДАЛЯЮ position start*/
+
+@media screen and (max-width: 2000px) {
+
+  .video-picture{
+    position: static;;
+  }
+  
+  .video-icon-play{
+    position: static;;
+    /* left: 636px;
+    bottom: 420px; */
+    background-color: aqua;
+  }
+
+  .title-wrapper{
+    position: static;;
+      
+  }
+      
+      
+  .title-line {
+   position: static;;
+   margin-top: 5px;
+  }   
+  
+  .header {
+  
+    z-index: 1;
+    max-width: 1440px;
+  
+    position: static;; /*фиксирем, теперь header высота не учитываетя для остального документа*/
+    top: 0; /*в верху*/
+    left: 50; /*слева*/
+    width: 100%; /*на всю ширину*/
+  }
+  
+  .header-burger {
+    
+    width: 40px;
+    height: 30px;
+    position: relative;;
+    margin-right: 30px;
+  }
+  
+  .burger-line12 {
+    display: block;
+    width: 100%;
+    height: 1px;/*какойто касяк*/
+    background-color: #ffffff;
+    position: absolute;;
+    left: 0;
+  }
+
+  
+.requisites{
+
+  max-width: 450px;
+  height: 445px;
+  margin-left: 0;
+  
+  bottom: -0px;
+  position: static;
+  top: 60px;
+  right: 20px;
+
+}
+
+
+.contact-me-text{
+  position: static;
+  top: 12px;
+  
+  margin: 0px;
+  
+
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size:20px;
+  padding: 0 20px;
+
+  color: #BDAE82;
+}
+
+  /* УДАЛЯЮ position end*/
+
+}
+
+/*Media end*/
