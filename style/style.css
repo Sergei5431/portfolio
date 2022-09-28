@@ -362,14 +362,14 @@ text-align: center;
     background-color: #000000;
   }
 
-  .button4 {
+  .portfolio-btns {
     
     max-width: 995px;
     /* height: 55px; */
     margin: 0 auto;
   }
 
-  .forma-submit4 {
+  .portfolio-btn {
     width: 220px;
     height: 55px;
     /* padding: 8px 70px; */
@@ -882,13 +882,13 @@ color: #FFFFFF;
     justify-content: center;
   }
 
-  .button4{
+  .portfolio-btns{
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
   }
 
-  .forma-submit4{
+  .portfolio-btn{
     margin-left: 10px;
   }
 
@@ -1008,3 +1008,60 @@ color: #FFFFFF;
 }
 
 /*Media end*/
+
+
+/* .portfolio-btn {
+  border: 2px solid var(--color-gold);
+  transition: color 0.3s ease;
+  background: transparent;
+  color: var(--color-gold);
+} */
+
+/* .portfolio-btn.active {
+  background: #ffffff;
+  color: #4fe431;
+}
+.main-btn::after {
+  content: "";
+  animation: flash 3s reverse infinite;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.main-btn::before {
+  content: "";
+  animation: flash 3s reverse infinite;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.portfolio-btn.main-btn:hover {
+  text-shadow: var(--main-bg-color) 0 0 5px;
+} */
+
+.portfolio-btn:hover,
+.portfolio-btn:focus,
+.portfolio-btn:active {
+  background: #604f1c;
+} 
+
+.navigation-lang-switch {
+  z-index: 2;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 50px;
+  color: #ffffff;
+  margin: 0 50px 0 0;
+}
+.navigation-lang-en {
+  margin: 0 4px 0 32px;
+  cursor: pointer;
+}
+.navigation-lang-en.active,
+.navigation-lang-ru.active {
+  color: #93a353;
+}
+.navigation-lang-ru {
+  margin: 0 20px 0 4px;
+  cursor: pointer;
+}
