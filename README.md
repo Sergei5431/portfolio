@@ -1,2 +1,2 @@
-# sergei5431-JSFEPRESCHOOL
-Private repository for @sergei5431
+# portfolio
+https://sergei5431.github.io/portfolio/
